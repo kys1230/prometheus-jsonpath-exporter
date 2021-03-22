@@ -50,6 +50,9 @@ python app/exporter.py example/config.yml
 
 ```
 docker run -p 9158:9158 -v $(pwd)/example/config.yml:/etc/prometheus-jsonpath-exporter/config.yml kys1230/prometheus-jsonpath-exporter
+
+# 国内
+docker run -p 9158:9158 -v $(pwd)/example/config.yml:/etc/prometheus-jsonpath-exporter/config.yml registry.cn-beijing.aliyuncs.com/kys1230/prometheus-jsonpath-exporter:latest
 ```
 
 ### JsonPath Syntax
