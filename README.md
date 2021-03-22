@@ -2,7 +2,7 @@
 
 通过 jsonpath 将 json 数据从 http url 转换为 prometheus metrics
 
-声明: 这个工具是在 “project-sunbird/prometheus-jsonpath-exporter” 上基础进行了一些额外的功能.
+声明: 这个工具是在 “[project-sunbird/prometheus-jsonpath-exporter](https://github.com/project-sunbird/prometheus-jsonpath-exporter)” 上基础进行了一些额外的功能.
 
 额外功能:
 
