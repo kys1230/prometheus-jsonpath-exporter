@@ -2,3 +2,4 @@ pytz
 objectpath
 prometheus_client
 pyYAML
+requests

@@ -1,12 +1,19 @@
 
-exporter_port: 9158 # Port on which prometheu can call this exporter to get metrics
-log_level: info
-json_data_url: http://stubonweb.herokuapp.com/kong-cluster-status # Url to get json data used for fetching metric values
-metric_name_prefix: kong_cluster # All metric names will be prefixed with this value
-metrics:
+exporter_port: 9158
+log_level: debug
+json_data_url: http://localhost:7000/runtime/statis
+metric_name_prefix: routerproxy
+global_labels:
+  labels_name1: labels_value1
+  labels_name2: labels_value2
 - name: total_nodes # Final metric name will be kong_cluster_total_nodes
   description: Total number of nodes in kong cluster
   path: $.total
+  labels:
+    labels_name3: labels_value3
 - name: alive_nodes # Final metric name will be kong_cluster_alive_nodes
   description: Number of live nodes in kong cluster
   path: count($.data[@.status is "alive"])
+  labels:
+    labels_name4: labels_value4
+
